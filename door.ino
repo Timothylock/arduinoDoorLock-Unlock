@@ -21,7 +21,7 @@ void setup(){
   pinMode(greenPin, OUTPUT);
 }
 
-void lock(){
+void lock(){ // Run nultiple times due to my motor not being strong enough
   // LED
   digitalWrite(greenPin, HIGH);
   digitalWrite(redPin, LOW);
