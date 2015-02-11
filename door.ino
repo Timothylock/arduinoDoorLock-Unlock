@@ -1,7 +1,7 @@
 int inPin = 4;   
 int motorFWD = 8;
 int motorBCK = 7;
-int greenPin = 12;
+int greenPin = 2;
 int redPin = 3;
 int doorSensor = 4;
 int lightSensor = A5;
@@ -21,23 +21,11 @@ void setup(){
   pinMode(greenPin, OUTPUT);
 }
 
-void lock(){ // Run nultiple times due to my motor not being strong enough
+void lock(){
   // LED
   digitalWrite(greenPin, HIGH);
   digitalWrite(redPin, LOW);
   // Motor
-  digitalWrite(motorFWD, HIGH);
-  digitalWrite(motorBCK, LOW);
-  delay(1500);
-  digitalWrite(motorFWD, LOW);
-  digitalWrite(motorBCK, LOW);
-  delay(500);
-  digitalWrite(motorFWD, HIGH);
-  digitalWrite(motorBCK, LOW);
-  delay(1500);
-  digitalWrite(motorFWD, LOW);
-  digitalWrite(motorBCK, LOW);
-  delay(500);
   digitalWrite(motorFWD, HIGH);
   digitalWrite(motorBCK, LOW);
   delay(1500);
